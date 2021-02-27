@@ -9,6 +9,11 @@ const projects = [
     name: "progress-steps",
     imgLink: "2-progress-step.png",
   },
+  {
+    number: 3,
+    name: "rotating-navigation",
+    imgLink: "3-rotating-navigation.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
@@ -21,5 +26,4 @@ const testing = projects.map((el) => {
           </a>
           </div>`;
 });
-console.log(testing);
 projectsEL.innerHTML = [...testing];
