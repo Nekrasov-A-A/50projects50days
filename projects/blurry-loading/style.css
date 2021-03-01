@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.bg-img {
+  height: 100vh;
+  width: 100vw;
+  background: url(https://i.ytimg.com/vi/MMPTyUceF5s/maxresdefault.jpg) center
+    center no-repeat;
+  background-size: cover;
+  filter: blur(100px);
+}
+.loader {
+  position: absolute;
+  font-size: 100px;
+  opacity: 1;
+}
