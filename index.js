@@ -14,16 +14,21 @@ const projects = [
     name: "rotating-navigation",
     imgLink: "3-rotating-navigation.png",
   },
+  {
+    number: 4,
+    name: "hidden-search-widget",
+    imgLink: "4-hidden-search-widget",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
-const testing = projects.map((el) => {
-  return `<div class='wrapper'>
-          <a href='/projects/${el.name}' target='_blank'>
+const testing = projects.forEach((el) => {
+  let projectEl = document.createElement("div");
+  projectEl.classList.add("wrapper");
+  projectEl.innerHTML = `<a href='/projects/${el.name}' target='_blank'>
             <img src='/img/${el.imgLink}'/>
             <span>${el.number}</span>
             <span>${el.name}</span>
-          </a>
-          </div>`;
+          </a>`;
+  projectsEL.appendChild(projectEl);
 });
-projectsEL.innerHTML = [...testing];
