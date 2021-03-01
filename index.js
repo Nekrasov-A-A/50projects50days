@@ -17,7 +17,7 @@ const projects = [
   {
     number: 4,
     name: "hidden-search-widget",
-    imgLink: "4-hidden-search-widget",
+    imgLink: "4-hidden-search-widget.png",
   },
 ];
 
