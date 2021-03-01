@@ -24,6 +24,11 @@ const projects = [
     name: "blurry-loading",
     imgLink: "5-blurry-loading.png",
   },
+  {
+    number: 6,
+    name: "scroll-animation",
+    imgLink: "6-scroll-animation.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
