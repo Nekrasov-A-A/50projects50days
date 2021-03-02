@@ -34,6 +34,11 @@ const projects = [
     name: "split-landing-page",
     imgLink: "7-split-landing-page.png",
   },
+  {
+    number: 8,
+    name: "form-wave",
+    imgLink: "8-form-wave.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
