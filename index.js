@@ -49,6 +49,11 @@ const projects = [
     name: "dad-jokes",
     imgLink: "10-dad-jokes.png",
   },
+  {
+    number: 11,
+    name: "event-keycodes",
+    imgLink: "11-event-keycodes.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
