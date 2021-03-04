@@ -54,6 +54,11 @@ const projects = [
     name: "event-keycodes",
     imgLink: "11-event-keycodes.png",
   },
+  {
+    number: 12,
+    name: "faq-collapse",
+    imgLink: "12-faq-collapse.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
