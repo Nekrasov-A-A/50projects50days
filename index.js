@@ -59,6 +59,11 @@ const projects = [
     name: "faq-collapse",
     imgLink: "12-faq-collapse.png",
   },
+  {
+    number: 13,
+    name: "random-choice-picker",
+    imgLink: "13-random-choice-picker.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
