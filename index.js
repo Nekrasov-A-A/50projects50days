@@ -64,6 +64,11 @@ const projects = [
     name: "random-choice-picker",
     imgLink: "13-random-choice-picker.png",
   },
+  {
+    number: 14,
+    name: "animated-navigation",
+    imgLink: "14-animated-navigation.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");

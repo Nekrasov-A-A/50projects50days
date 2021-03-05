@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(10, 13, 165, 0.658) 0%,
+    rgba(10, 13, 165, 0.658) 50%,
+    rgba(1, 207, 207, 0.808) 50%,
+    rgba(1, 207, 207, 0.808) 100%
+  );
+}
+.container {
+  display: flex;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 2px;
+  width: 350px;
+  transition: width 0.7s linear;
+}
+.container.fly {
+  width: 72px;
+}
+.container ul {
+  display: flex;
+  width: 100%;
+  transition: width 0.7s linear;
+}
+.container ul li {
+  list-style-type: none;
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.7s linear;
+  opacity: 1;
+}
+
+.container ul li:hover {
+  color: royalblue;
+}
+.container .lines {
+  min-height: 100%;
+  position: relative;
+  cursor: pointer;
+  width: 25px;
+}
+.container .line {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(40, 97, 184);
+  position: absolute;
+  top: 9.5px;
+  left: 0;
+  transition: transform 0.7s linear;
+}
+.container .line1 {
+  transform: rotate(-45deg);
+}
+.container .line2 {
+  transform: rotate(45deg);
+}
+.container .nav {
+  width: 100%;
+  transition: width 0.7s linear;
+}
+.container.fly .nav {
+  width: 0;
+}
+.container.fly .nav ul {
+  width: 0;
+}
+.container.fly .nav ul li {
+  opacity: 0;
+  margin: 0;
+}
+.container.fly .line1 {
+  transform: rotate(720deg) translateY(5px);
+}
+.container.fly .line2 {
+  transform: rotate(-720deg) translateY(-5px);
+}
