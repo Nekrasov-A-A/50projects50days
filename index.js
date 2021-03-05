@@ -74,6 +74,11 @@ const projects = [
     name: "incrementing-counter",
     imgLink: "15-incrementing-counter.png",
   },
+  {
+    number: 16,
+    name: "drink-water",
+    imgLink: "16-drink-water.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
