@@ -89,6 +89,11 @@ const projects = [
     name: "background-slider",
     imgLink: "18-background-slider.png",
   },
+  {
+    number: 19,
+    name: "theme-clock",
+    imgLink: "19-theme-clock.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");

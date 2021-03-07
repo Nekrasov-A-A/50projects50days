@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Heebo:300&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Heebo", sans-serif;
+  background-color: rgba(41, 41, 41, 0.733);
+}
+.wrapper.light {
+  background-color: #fff;
+}
+.wrapper .clock {
+  position: relative;
+  height: 200px;
+  width: 200px;
+}
+.wrapper .clock .needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 100px;
+  background-color: #fff;
+  transform-origin: bottom center;
+  transition: all 0.5s ease-in;
+  border-radius: 2px;
+}
+.wrapper.light .clock .needle {
+  background-color: black;
+}
+.wrapper .clock .needle.hours {
+  width: 4px;
+  height: 60px;
+}
+.wrapper .clock .needle.seconds {
+  background-color: rgba(182, 0, 0, 0.76);
+  width: 2px;
+}
+.wrapper .clock .needle.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+}
+.wrapper.light .clock .needle.circle {
+  background-color: black;
+}
+.wrapper .clock .needle.circle::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid rgba(182, 0, 0, 0.76);
+  width: 4px;
+  height: 4px;
+}
+.wrapper .date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.wrapper.light .date {
+  color: black;
+}
+.wrapper .date .big-text {
+  font-size: 50px;
+  margin-bottom: 5px;
+}
+.wrapper .date .small-text {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.671);
+}
+.wrapper.light .date .small-text {
+  color: rgba(0, 0, 0, 0.671);
+}
+.wrapper .date .small-text .date-circle {
+  display: block;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  margin-left: 10px;
+  color: black;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper.light .date .small-text .date-circle {
+  background-color: black;
+  color: #fff;
+}
+.wrapper .toggle-theme {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 0;
+  background-color: #fff;
+  color: black;
+  margin-bottom: 100px;
+}
+.wrapper .toggle-theme:focus {
+  outline: none;
+}
+.wrapper.light .toggle-theme {
+  background-color: black;
+  color: #fff;
+}
