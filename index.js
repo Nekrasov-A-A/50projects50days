@@ -79,6 +79,11 @@ const projects = [
     name: "drink-water",
     imgLink: "16-drink-water.png",
   },
+  {
+    number: 17,
+    name: "movie-app",
+    imgLink: "17-movie-app.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
