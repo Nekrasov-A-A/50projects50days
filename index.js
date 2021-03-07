@@ -84,6 +84,11 @@ const projects = [
     name: "movie-app",
     imgLink: "17-movie-app.png",
   },
+  {
+    number: 18,
+    name: "background-slider",
+    imgLink: "18-background-slider.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
