@@ -94,6 +94,11 @@ const projects = [
     name: "theme-clock",
     imgLink: "19-theme-clock.png",
   },
+  {
+    number: 20,
+    name: "button-ripple-effect",
+    imgLink: "20-button-ripple-effect.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
