@@ -99,6 +99,11 @@ const projects = [
     name: "button-ripple-effect",
     imgLink: "20-button-ripple-effect.png",
   },
+  {
+    number: 21,
+    name: "drag-n-drop",
+    imgLink: "21-drag-n-drop.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
