@@ -104,6 +104,16 @@ const projects = [
     name: "drag-n-drop",
     imgLink: "21-drag-n-drop.png",
   },
+  {
+    number: 22,
+    name: "drawing-app",
+    imgLink: "22-drawing-app.png",
+  },
+  {
+    number: 23,
+    name: "kinetic-loader",
+    imgLink: "23-kinetic-loader.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
