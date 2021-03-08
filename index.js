@@ -149,6 +149,11 @@ const projects = [
     name: "auto-text-effect",
     imgLink: "30-auto-text-effect.png",
   },
+  {
+    number: 31,
+    name: "password-generator",
+    imgLink: "31-password-generator.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
