@@ -119,6 +119,11 @@ const projects = [
     name: "content-placeholder",
     imgLink: "24-content-placeholder.png",
   },
+  {
+    number: 25,
+    name: "sticky-navbar",
+    imgLink: "25-sticky-navbar.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
