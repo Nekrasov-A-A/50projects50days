@@ -144,6 +144,11 @@ const projects = [
     name: "double-click-heart",
     imgLink: "29-double-click-heart.png",
   },
+  {
+    number: 30,
+    name: "auto-text-effect",
+    imgLink: "30-auto-text-effect.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
