@@ -129,6 +129,11 @@ const projects = [
     name: "double-vertical-slider",
     imgLink: "26-double-vertical-slider.png",
   },
+  {
+    number: 27,
+    name: "toast-notification",
+    imgLink: "27-toast-notification.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
