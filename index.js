@@ -114,6 +114,11 @@ const projects = [
     name: "kinetic-loader",
     imgLink: "23-kinetic-loader.png",
   },
+  {
+    number: 24,
+    name: "content-placeholder",
+    imgLink: "24-content-placeholder.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
