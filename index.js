@@ -124,6 +124,11 @@ const projects = [
     name: "sticky-navbar",
     imgLink: "25-sticky-navbar.png",
   },
+  {
+    number: 26,
+    name: "double-vertical-slider",
+    imgLink: "26-double-vertical-slider.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
