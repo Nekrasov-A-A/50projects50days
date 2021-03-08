@@ -134,6 +134,11 @@ const projects = [
     name: "toast-notification",
     imgLink: "27-toast-notification.png",
   },
+  {
+    number: 28,
+    name: "github-profiles",
+    imgLink: "28-github-profiles.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
