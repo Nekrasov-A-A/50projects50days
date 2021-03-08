@@ -139,6 +139,11 @@ const projects = [
     name: "github-profiles",
     imgLink: "28-github-profiles.png",
   },
+  {
+    number: 29,
+    name: "double-click-heart",
+    imgLink: "29-double-click-heart.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
