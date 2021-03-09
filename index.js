@@ -154,6 +154,11 @@ const projects = [
     name: "password-generator",
     imgLink: "31-password-generator.png",
   },
+  {
+    number: 32,
+    name: "good-cheap-fast",
+    imgLink: "32-good-cheap-fast.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
