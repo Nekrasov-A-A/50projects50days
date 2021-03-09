@@ -164,6 +164,11 @@ const projects = [
     name: "notes-app",
     imgLink: "33-notes-app.png",
   },
+  {
+    number: 34,
+    name: "animated-countdown",
+    imgLink: "34-animated-countdown.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");

@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Akaya Telivigala", sans-serif;
+}
+.wrapper .repeat,
+.wrapper .wrap-animate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .repeat h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.wrapper .repeat .btn {
+  font-family: "Akaya Telivigala", sans-serif;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 10px;
+  font-size: 16px;
+  background-color: rgba(185, 106, 106, 0.76);
+  cursor: pointer;
+}
+.wrapper .repeat .btn:focus {
+  outline: none;
+}
+.wrap-animate .animate-box {
+  overflow: hidden;
+  font-family: "Akaya Telivigala", sans-serif;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.animate-box__item {
+  color: rgba(0, 0, 172, 0.795);
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-size: 80px;
+  transform-origin: bottom left;
+  animation: toLeft 1s ease-in-out forwards;
+}
+.wrapper .repeat.hidden,
+.wrapper .wrap-animate.hidden {
+  display: none;
+}
+@keyframes toLeft {
+  0% {
+    transform: rotate(180deg) translateX(-50%) scale(1);
+  }
+  15%,
+  75% {
+    transform: rotate(0deg) translateX(-50%) scale(1.2);
+  }
+  30%,
+  40% {
+    transform: rotate(-5deg) translateX(-50%) scale(1.2);
+  }
+  35%,
+  45% {
+    transform: rotate(5deg) translateX(-50%) scale(1.2);
+  }
+  100% {
+    transform: rotate(-180deg) translateX(-50%) scale(1);
+  }
+}
