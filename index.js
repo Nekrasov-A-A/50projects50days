@@ -169,6 +169,11 @@ const projects = [
     name: "animated-countdown",
     imgLink: "34-animated-countdown.png",
   },
+  {
+    number: 35,
+    name: "image-carousel",
+    imgLink: "35-image-carousel.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
