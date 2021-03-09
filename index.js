@@ -179,6 +179,11 @@ const projects = [
     name: "hoverboard",
     imgLink: "36-hoverboard.png",
   },
+  {
+    number: 37,
+    name: "pokedex",
+    imgLink: "37-pokedex.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
