@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.header {
+  height: 10vh;
+  background-color: rgb(14, 247, 255);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+}
+.header .header__btn {
+  border: 0;
+  padding: 10px 15px;
+  background-color: rgba(65, 255, 65, 0.753);
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px 2px rgba(65, 255, 65, 0.753),
+    -1px -1px 2px 2px rgba(65, 255, 65, 0.753);
+}
+.header .header__btn:focus {
+  outline: 0;
+}
+.header .header__btn:active {
+  transform: scale(0.98);
+}
+.header .header__btn span {
+  margin-left: 5px;
+}
+.main {
+  background-color: rgb(14, 247, 255);
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 400px;
+  grid-gap: 20px;
+  min-height: 100vh;
+  padding: 50px 5% 50px 5%;
+}
+.note {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px 2px rgba(14, 247, 255, 0.836),
+    -1px -1px 1px 2px rgba(14, 247, 255, 0.836);
+}
+.note .note__header {
+  height: 10%;
+  background-color: rgba(81, 255, 81, 0.623);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 5px 20px;
+}
+.note .note__header .note__btn {
+  margin-left: 20px;
+  font-size: 20px;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.note .note__header .note__btn:focus {
+  outline: none;
+}
+.note .note__header .note__btn:active {
+  transform: scale(0.9);
+}
+.note .content,
+.note .textar {
+  height: 360px;
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+}
+.note .textar {
+  display: flex;
+  resize: none;
+  border: 0;
+}
+.note .textar:focus {
+  outline: 0;
+}
+.note .content.hidden,
+.note .textar.hidden {
+  display: none;
+}

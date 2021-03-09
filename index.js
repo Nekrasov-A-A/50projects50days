@@ -159,6 +159,11 @@ const projects = [
     name: "good-cheap-fast",
     imgLink: "32-good-cheap-fast.png",
   },
+  {
+    number: 33,
+    name: "notes-app",
+    imgLink: "33-notes-app.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
