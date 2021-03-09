@@ -174,6 +174,11 @@ const projects = [
     name: "image-carousel",
     imgLink: "35-image-carousel.png",
   },
+  {
+    number: 36,
+    name: "hoverboard",
+    imgLink: "36-hoverboard.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");

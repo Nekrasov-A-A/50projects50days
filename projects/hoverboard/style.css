@@ -1,0 +1,34 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #e25822;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 40vw;
+}
+
+.square {
+  margin: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+  transition: 3.5s;
+  border-radius: 50%;
+}
+.square:hover {
+  transition-duration: 0s;
+}
