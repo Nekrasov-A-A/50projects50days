@@ -189,6 +189,11 @@ const projects = [
     name: "mobile-tab-navigation",
     imgLink: "38-mobile-tab-navigation.png",
   },
+  {
+    number: 39,
+    name: "password-strength-background",
+    imgLink: "39-password-strength-background.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
