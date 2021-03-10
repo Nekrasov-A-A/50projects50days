@@ -209,6 +209,11 @@ const projects = [
     name: "live-user-filter",
     imgLink: "42-live-user-filter.png",
   },
+  {
+    number: 43,
+    name: "feedback-ui-design",
+    imgLink: "43-feedback-ui-design.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
