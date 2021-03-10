@@ -194,6 +194,11 @@ const projects = [
     name: "password-strength-background",
     imgLink: "39-password-strength-background.png",
   },
+  {
+    number: 40,
+    name: "3d-background-boxes",
+    imgLink: "40-3d-background-boxes.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
