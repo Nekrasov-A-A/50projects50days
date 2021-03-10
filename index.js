@@ -184,6 +184,11 @@ const projects = [
     name: "pokedex",
     imgLink: "37-pokedex.png",
   },
+  {
+    number: 38,
+    name: "mobile-tab-navigation",
+    imgLink: "38-mobile-tab-navigation.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");

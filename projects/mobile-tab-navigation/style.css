@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.5);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 3px;
+  background-color: #fff;
+  height: 75%;
+  width: 25%;
+  border-radius: 20px;
+}
+.slides {
+  height: 85%;
+  width: 100%;
+  position: relative;
+  border-top-right-radius: 17px;
+  border-top-left-radius: 17px;
+  overflow: hidden;
+  z-index: 1;
+}
+.slides .slide {
+  background-image: url(https://images.unsplash.com/photo-1503958014551-3b41f69234d9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=632&q=80);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.slides .slide:nth-child(2) {
+  background-image: url(https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80);
+}
+.slides .slide:nth-child(3) {
+  background-image: url(https://images.unsplash.com/photo-1514782831304-632d84503f6f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80);
+}
+.slides .slide:nth-child(4) {
+  background-image: url(https://images.unsplash.com/photo-1524475922556-171e86798684?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=624&q=80);
+  background-position: center center;
+}
+.slides .slide.show {
+  opacity: 1;
+}
+.container .tools {
+  height: 15%;
+  display: flex;
+  margin: 0 1.9px 1.9px 1.9px;
+  align-items: center;
+  justify-content: space-around;
+
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.123),
+    0px -1px 10px 1px rgba(0, 0, 0, 0.123);
+  border-bottom-left-radius: 17px;
+  border-bottom-right-radius: 17px;
+}
+.container .tools .btn {
+  border: 0;
+  background-color: transparent;
+  color: rgba(128, 128, 128, 0.726);
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.container .tools .btn.active {
+  color: blueviolet;
+}
+.container .tools .btn:focus {
+  outline: none;
+}
+.container .tools .btn:hover {
+  color: blueviolet;
+}
+.container .tools .btn p {
+  margin-top: 5px;
+  font-size: 14px;
+}
