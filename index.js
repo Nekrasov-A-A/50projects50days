@@ -204,6 +204,11 @@ const projects = [
     name: "verify-account-ui",
     imgLink: "41-verify-account-ui.png",
   },
+  {
+    number: 42,
+    name: "live-user-filter",
+    imgLink: "42-live-user-filter.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
