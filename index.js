@@ -199,6 +199,11 @@ const projects = [
     name: "3d-background-boxes",
     imgLink: "40-3d-background-boxes.png",
   },
+  {
+    number: 41,
+    name: "verify-account-ui",
+    imgLink: "41-verify-account-ui.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
