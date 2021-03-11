@@ -9,6 +9,7 @@ openBtn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   wrap.classList.remove("show");
   wrap.classList.add("hidden");
-
-  openBtn.style.display = "block";
+  setTimeout(() => {
+    openBtn.style.display = "block";
+  }, 900);
 });
