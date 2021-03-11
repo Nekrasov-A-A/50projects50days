@@ -219,6 +219,11 @@ const projects = [
     name: "custom-range-slider",
     imgLink: "44-custom-range-slider.png",
   },
+  {
+    number: 45,
+    name: "netflix-mobile-navigation",
+    imgLink: "45-netflix-mobile-navigation.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
