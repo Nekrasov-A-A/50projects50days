@@ -214,6 +214,11 @@ const projects = [
     name: "feedback-ui-design",
     imgLink: "43-feedback-ui-design.png",
   },
+  {
+    number: 44,
+    name: "custom-range-slider",
+    imgLink: "44-custom-range-slider.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
