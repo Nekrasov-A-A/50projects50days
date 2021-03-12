@@ -234,6 +234,11 @@ const projects = [
     name: "testimonial-box-switcher",
     imgLink: "47-testimonial-box-switcher.png",
   },
+  {
+    number: 48,
+    name: "random-image-feed",
+    imgLink: "48-random-image-feed.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
