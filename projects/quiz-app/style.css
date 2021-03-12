@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(124, 124, 124, 0.699);
+  font-family: "Poppins", sans-serif;
+}
+.container,
+.container-total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.container-total.hidden,
+.container.hidden {
+  display: none;
+}
+.container h3,
+.container-total h3 {
+  padding: 60px 80px 30px;
+}
+.container .btn,
+.container-total .btn {
+  border: 0;
+  padding: 20px;
+  width: 100%;
+  margin-top: 40px;
+  color: #fff;
+  background-color: rgba(175, 0, 175, 0.774);
+}
+.container .btn:focus,
+.container-total .btn:focus {
+  outline: none;
+}
+.container .btn:hover,
+.container-total .btn:hover {
+  background-color: rgba(175, 0, 175, 0.849);
+}
+.container .form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0 60px;
+}
+.container .form div {
+  margin-bottom: 10px;
+}
+.container .form div input,
+.container .form div label {
+  cursor: pointer;
+}

@@ -224,6 +224,11 @@ const projects = [
     name: "netflix-mobile-navigation",
     imgLink: "45-netflix-mobile-navigation.png",
   },
+  {
+    number: 46,
+    name: "quiz-app",
+    imgLink: "46-quiz-app.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
