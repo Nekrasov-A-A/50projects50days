@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 40px;
+  background-color: rgba(124, 124, 124, 0.699);
+  font-family: "Poppins", sans-serif;
+}
+.wrapper .input {
+  padding: 10px;
+  font-size: 16px;
+  width: 60%;
+  border: 2px solid transparent;
+  font-family: "Poppins", sans-serif;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+.wrapper .input:focus {
+  outline: none;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+.todo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+.todo-wrapper button {
+  border: 0;
+  padding: 0 5px;
+  font-size: 16px;
+  color: rgba(134, 134, 134, 0.644);
+  background-color: transparent;
+  cursor: pointer;
+}
+.todo-wrapper button:hover {
+  color: black;
+}
+.todo-wrapper button:focus {
+  outline: none;
+}
+.todo-wrapper textarea {
+  display: block;
+  border: 0;
+  resize: none;
+  padding: 10px 10px 0 10px;
+  width: 85%;
+  line-height: 14px;
+  height: 100%;
+}
+.todo-wrapper textarea:focus {
+  outline: none;
+}
+.todo-wrapper .control-value {
+  width: 85%;
+  background-color: #fff;
+}
+.tools {
+  width: 15%;
+}
+.todo-wrapper.completed {
+  border: 2px solid chartreuse;
+  color: chartreuse;
+}
+.todo-wrapper.completed .tools button .fa-check {
+  color: chartreuse;
+}

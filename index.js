@@ -239,6 +239,11 @@ const projects = [
     name: "random-image-feed",
     imgLink: "48-random-image-feed.png",
   },
+  {
+    number: 49,
+    name: "todo-list",
+    imgLink: "49-todo-list.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
