@@ -244,6 +244,11 @@ const projects = [
     name: "todo-list",
     imgLink: "49-todo-list.png",
   },
+  {
+    number: 50,
+    name: "insect-catch-game",
+    imgLink: "50-insect-catch-game.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");

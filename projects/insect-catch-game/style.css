@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 90, 143, 0.644);
+  font-family: "Press Start 2P", sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+.first-screen,
+.second-screen {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-out;
+  position: absolute;
+}
+.first-screen h3,
+.second-screen h3 {
+  color: #fff;
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+.first-screen .btn {
+  border: 0;
+  background-color: #fff;
+  color: rgba(0, 90, 143, 0.644);
+  font-family: "Press Start 2P", sans-serif;
+  padding: 20px;
+}
+.first-screen .btn:focus {
+  outline: none;
+}
+.first-screen .btn:active {
+  transform: scale(0.98);
+}
+.first-screen .btn:hover {
+  background-color: rgba(255, 255, 255, 0.781);
+}
+.first-screen {
+  transform: translateY(0%);
+}
+.second-screen {
+  transform: translateY(100%);
+}
+.third-screen {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+  transform: translateY(200%);
+  transition: all 0.5s ease-out;
+  position: absolute;
+}
+.choise {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.choise .second-screen-btn {
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-family: "Press Start 2P", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.5rem;
+  padding: 5px;
+  width: 100px;
+  height: 120px;
+  margin: 10px 10px 0;
+  border-radius: 2px;
+}
+.choise .second-screen-btn img {
+  width: 80px;
+}
+.choise .second-screen-btn:focus {
+  outline: none;
+}
+.choise .second-screen-btn:hover {
+  background-color: #fff;
+  color: rgba(0, 90, 143, 0.644);
+}
+.third-screen .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  width: 100%;
+  height: 8%;
+  color: #fff;
+}
+.box {
+  height: 92%;
+  width: 100%;
+  position: relative;
+}
+.img-wrap {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 0;
+  cursor: pointer;
+}
+.img-wrap img {
+  max-width: 100%;
+}
+.spam {
+  display: flex;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  justify-content: center;
+  background-color: rgba(0, 94, 122, 0.527);
+  color: #fff;
+  padding: 20px;
+}
