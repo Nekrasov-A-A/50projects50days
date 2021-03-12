@@ -229,6 +229,11 @@ const projects = [
     name: "quiz-app",
     imgLink: "46-quiz-app.png",
   },
+  {
+    number: 47,
+    name: "testimonial-box-switcher",
+    imgLink: "47-testimonial-box-switcher.png",
+  },
 ];
 
 const projectsEL = document.getElementById("projects");
