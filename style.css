@@ -1,6 +1,54 @@
-.wrapper {
-  width: 400px;
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+.projects {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  background-color: rgba(25, 1, 129, 0.466);
+  padding: 20px;
+  font-family: "Ranchers", sans-serif;
+  font-size: 20px;
+}
+
 img {
   max-width: 100%;
+}
+.projects .wrapper {
+}
+.projects .wrapper .link {
+  position: relative;
+  color: rgba(255, 255, 255, 0.932);
+  display: block;
+}
+.projects .wrapper .num {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.705);
+  padding: 5px;
+  border-radius: 50%;
+}
+.projects .wrapper .name {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(255, 166, 0, 0.822);
+  bottom: 0;
+  left: 0;
+  padding: 4px 0;
+}
+
+.projects .wrapper .num:hover {
+  animation: numHover 0.6s infinite;
+}
+@keyframes numHover {
+  100% {
+    transform: rotate(360deg);
+  }
 }

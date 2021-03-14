@@ -255,10 +255,16 @@ const projectsEL = document.getElementById("projects");
 const testing = projects.forEach((el) => {
   let projectEl = document.createElement("div");
   projectEl.classList.add("wrapper");
-  projectEl.innerHTML = `<a href='/projects/${el.name}' target='_blank'>
+  projectEl.setAttribute("data-tilt", "");
+  projectEl.setAttribute("data-tilt-perspective", "500");
+  projectEl.innerHTML = `<a href='/projects/${
+    el.name
+  }' target='_blank' class='link'>
             <img src='/img/${el.imgLink}'/>
-            <span>${el.number}</span>
-            <span>${el.name}</span>
+            <span class='num'>${
+              el.number <= 9 ? "0" + el.number : el.number
+            }</span>
+            <span class='name'>${el.name.replace(/-/g, " ")}</span>
           </a>`;
   projectsEL.appendChild(projectEl);
 });
