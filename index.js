@@ -260,7 +260,7 @@ const testing = projects.forEach((el) => {
   projectEl.innerHTML = `<a href='/projects/${
     el.name
   }' target='_blank' class='link'>
-            <img src='img/${el.imgLink}'/>
+            <img src='/img/${el.imgLink}'/>
             <span class='num'>${
               el.number <= 9 ? "0" + el.number : el.number
             }</span>
