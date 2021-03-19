@@ -11,17 +11,17 @@
   justify-content: center;
   font-family: "Akaya Telivigala", sans-serif;
 }
-.wrapper .repeat,
+.wrapper .static-box,
 .wrapper .wrap-animate {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.wrapper .repeat h3 {
+.wrapper .static-box h3 {
   font-size: 30px;
   margin-bottom: 10px;
 }
-.wrapper .repeat .btn {
+.wrapper .static-box .btn {
   font-family: "Akaya Telivigala", sans-serif;
   padding: 10px 15px;
   border: 0;
@@ -30,7 +30,7 @@
   background-color: rgba(185, 106, 106, 0.76);
   cursor: pointer;
 }
-.wrapper .repeat .btn:focus {
+.wrapper .static-box .btn:focus {
   outline: none;
 }
 .wrap-animate .animate-box {
@@ -49,7 +49,7 @@
   transform-origin: bottom left;
   animation: toLeft 1s ease-in-out forwards;
 }
-.wrapper .repeat.hidden,
+.wrapper .static-box.hidden,
 .wrapper .wrap-animate.hidden {
   display: none;
 }

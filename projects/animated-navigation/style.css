@@ -25,7 +25,7 @@
   width: 350px;
   transition: width 0.7s linear;
 }
-.container.fly {
+.container.open {
   width: 72px;
 }
 .container ul {
@@ -61,29 +61,29 @@
   left: 0;
   transition: transform 0.7s linear;
 }
-.container .line1 {
+.container .line-one {
   transform: rotate(-45deg);
 }
-.container .line2 {
+.container .line-two {
   transform: rotate(45deg);
 }
 .container .nav {
   width: 100%;
   transition: width 0.7s linear;
 }
-.container.fly .nav {
+.container.open .nav {
   width: 0;
 }
-.container.fly .nav ul {
+.container.open .nav ul {
   width: 0;
 }
-.container.fly .nav ul li {
+.container.open .nav ul li {
   opacity: 0;
   margin: 0;
 }
-.container.fly .line1 {
+.container.open .line-one {
   transform: rotate(720deg) translateY(5px);
 }
-.container.fly .line2 {
+.container.open .line-two {
   transform: rotate(-720deg) translateY(-5px);
 }

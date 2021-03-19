@@ -19,14 +19,14 @@
   font-size: 24px;
 }
 
-.wrapper .speed {
+.wrapper .container {
   position: absolute;
   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 18px;
 }
-.wrapper .speed input {
+.wrapper .container input {
   border-radius: 8px;
   border: 0;
   padding: 5px;
@@ -34,6 +34,6 @@
   text-align: center;
   width: 50px;
 }
-.wrapper .speed input:focus {
+.wrapper .container input:focus {
   outline: none;
 }

@@ -1,5 +1,6 @@
-const lines = document.getElementById("lines");
+const linesEl = document.getElementById("lines");
+const containerEl = document.querySelector(".container");
 
 lines.addEventListener("click", () => {
-  document.querySelector(".container").classList.toggle("fly");
+  containerEl.classList.toggle("open");
 });

@@ -1,36 +1,35 @@
 const btn = document.getElementById("btn");
-const repeat = document.getElementById("repeat");
-const wrap = document.getElementById("wrap");
-const animateBox = document.getElementById("animate-box");
-const wrapAnimate = document.getElementById("wrap-animate");
+const staticBoxEl = document.getElementById("static-box");
+const animateBoxEl = document.getElementById("animate-box");
+const wrapperAnimateBoxEl = document.getElementById("wrap-animate");
 let count = 0;
 
-const fn = () => {
-  const num = document.createElement("div");
-  num.classList.add("animate-box__item");
-  num.innerText = count;
+const createNumber = () => {
+  animateBoxEl.innerHTML = "";
+  const numberEl = document.createElement("div");
+  numberEl.classList.add("animate-box__item");
+  numberEl.innerText = count;
   ++count;
-  animateBox.appendChild(num);
-  setTimeout(() => {
-    num.remove();
-  }, 1000);
+  animateBoxEl.appendChild(numberEl);
 };
-const getStart = () => {
-  fn();
+
+const repeatAnimation = () => {
+  createNumber();
   const interval = setInterval(() => {
-    fn();
+    createNumber();
   }, 1000);
   setTimeout(() => {
     clearInterval(interval);
     count = 0;
-    wrapAnimate.classList.toggle("hidden");
-    repeat.classList.toggle("hidden");
+    wrapperAnimateBoxEl.classList.toggle("hidden");
+    staticBoxEl.classList.toggle("hidden");
   }, 4000);
 };
 
 btn.addEventListener("click", () => {
-  getStart();
-  repeat.classList.toggle("hidden");
-  wrapAnimate.classList.toggle("hidden");
+  repeatAnimation();
+  staticBoxEl.classList.toggle("hidden");
+  wrapperAnimateBoxEl.classList.toggle("hidden");
 });
-getStart();
+
+repeatAnimation();
