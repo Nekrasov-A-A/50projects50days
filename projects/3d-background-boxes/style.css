@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+:root {
+  --square-side: 40vw;
+}
 .wrapper {
   display: flex;
   height: 100vh;
@@ -11,53 +14,53 @@
   background-color: rgb(0, 210, 238);
   position: relative;
 }
-.wrapper .header {
+.wrapper .wrapper__header {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  height: 10%;
+  height: 10vh;
   display: flex;
   align-items: center;
 }
-.wrapper .header .btn {
+.wrapper .wrapper__header .btn {
   border: 0;
   background-color: rgba(146, 3, 3, 0.548);
   padding: 10px 20px;
   border-radius: 4px;
   color: #fff;
 }
-.wrapper .header .btn:focus {
+.wrapper .wrapper__header .btn:focus {
   outline: none;
 }
-.wrapper .header .btn:active {
+.wrapper .wrapper__header .btn:active {
   transform: scale(0.98);
 }
-.wrapper .container {
-  height: 500px;
-  width: 500px;
+.wrapper .wrapper__container {
+  height: calc(var(--square-side) - 5vw);
+  width: calc(var(--square-side) - 5vw);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   transition: all 0.4 ease;
 }
-.wrapper .container.big {
-  height: 600px;
-  width: 600px;
+.wrapper .wrapper__container.big {
+  height: var(--square-side);
+  width: var(--square-side);
 }
-.wrapper .container .box {
+.wrapper .wrapper__container .box {
   background-image: url("https://media.giphy.com/media/EZqwsBSPlvSda/giphy.gif");
   background-repeat: no-repeat;
-  background-size: 500px 500px;
+  background-size: 400% 400%;
   position: relative;
-  height: 125px;
-  width: 125px;
+  height: 8.75vw;
+  width: 8.75vw;
   transition: 0.4s ease;
 }
-.wrapper .container.big .box {
+.wrapper .wrapper__container.big .box {
   transform: rotate(360deg);
 }
-.wrapper .container .box::after {
+.wrapper .wrapper__container .box::after {
   content: "";
   position: absolute;
   top: 8px;
@@ -67,7 +70,7 @@
   background-color: #f6e58d;
   transform: skewY(45deg);
 }
-.wrapper .container .box::before {
+.wrapper .wrapper__container .box::before {
   content: "";
   position: absolute;
   bottom: -15px;
@@ -76,4 +79,18 @@
   width: 100%;
   background-color: #f9ca24;
   transform: skewX(45deg);
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --square-side: 80vw;
+  }
+  .wrapper .wrapper__container {
+    height: calc(var(--square-side) - 10vw);
+    width: calc(var(--square-side) - 10vw);
+  }
+  .wrapper .wrapper__container .box {
+    width: calc(70vw / 4);
+    height: calc(70vw / 4);
+  }
 }
