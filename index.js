@@ -251,20 +251,23 @@ const projects = [
   },
 ];
 
-const projectsEL = document.getElementById("projects");
-const testing = projects.forEach((el) => {
+const projectsBox = document.getElementById("projects");
+projects.forEach((el) => {
   let projectEl = document.createElement("div");
-  projectEl.classList.add("wrapper");
+  projectEl.classList.add("project-wrapper");
   projectEl.setAttribute("data-tilt", "");
   projectEl.setAttribute("data-tilt-perspective", "500");
   projectEl.innerHTML = `<a href='/projects/${
     el.name
-  }' target='_blank' class='link'>
+  }' target='_blank' class='project-wrapper__link'>
             <img src='/img/${el.imgLink}'/>
-            <span class='num'>${
+            <span class='project-wrapper__number'>${
               el.number <= 9 ? "0" + el.number : el.number
             }</span>
-            <span class='name'>${el.name.replace(/-/g, " ")}</span>
+            <span class='project-wrapper__name'>${el.name.replace(
+              /-/g,
+              " "
+            )}</span>
           </a>`;
-  projectsEL.appendChild(projectEl);
+  projectsBox.appendChild(projectEl);
 });
