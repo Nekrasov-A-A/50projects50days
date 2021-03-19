@@ -11,7 +11,7 @@
   justify-content: center;
   position: relative;
 }
-.bg-img {
+.container .bg-img {
   height: 100vh;
   width: 100vw;
   background: url(https://i.ytimg.com/vi/MMPTyUceF5s/maxresdefault.jpg) center
@@ -19,8 +19,14 @@
   background-size: cover;
   filter: blur(100px);
 }
-.loader {
+.container .loader {
   position: absolute;
   font-size: 100px;
   opacity: 1;
+}
+@media screen and (max-width: 520px) {
+  .container .bg-img {
+    background: url(https://lh3.googleusercontent.com/proxy/_NFeW4VWyonnXVsFKPiXRr2y9aXPxXp32NJzsTJ8t22ov6uxUKI72E0fOgfAHU24EhMe1zOzC2FdtOs_3tDIXFuASANHt9h1GEJFU9rwlgOEOgLTZ-ZUDE_2EPlHlHHczl3a992t6Zm4YSUtsyPc);
+    background-size: contain;
+  }
 }
