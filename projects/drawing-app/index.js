@@ -3,7 +3,7 @@ const colorEl = document.getElementById("color");
 const clearEl = document.getElementById("clear");
 const decreaseBtn = document.getElementById("decrease");
 const increaseBtn = document.getElementById("increase");
-const sizeScreen = document.getElementById("show-size");
+const sizeBox = document.getElementById("show-size");
 
 let size = 10;
 let isPressed = false;
@@ -28,30 +28,58 @@ const drawCircle = (x, y) => {
 };
 
 const updateSize = () => {
-  sizeScreen.innerText = size;
+  sizeBox.innerText = size;
 };
-canvasEl.addEventListener("mousedown", (ev) => {
-  isPressed = true;
-  x = ev.offsetX;
-  y = ev.offsetY;
-});
 
-canvasEl.addEventListener("mouseup", () => {
-  isPressed = false;
-  x = undefined;
-  y = undefined;
-});
+if (
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+    navigator.userAgent
+  )
+) {
+  canvasEl.addEventListener("touchstart", (ev) => {
+    isPressed = true;
+    x = ev.changedTouches[0].pageX;
+    y = ev.changedTouches[0].pageY;
+  });
+  canvasEl.addEventListener("touchend", () => {
+    isPressed = false;
+    x = undefined;
+    y = undefined;
+  });
+  canvasEl.addEventListener("touchmove", (ev) => {
+    if (isPressed) {
+      let x2 = ev.changedTouches[0].pageX;
+      let y2 = ev.changedTouches[0].pageY;
+      drawCircle(x2, y2);
+      drawLine(x, y, x2, y2);
+      y = y2;
+      x = x2;
+    }
+  });
+} else {
+  canvasEl.addEventListener("mousedown", (ev) => {
+    isPressed = true;
+    x = ev.offsetX;
+    y = ev.offsetY;
+  });
 
-canvasEl.addEventListener("mousemove", (ev) => {
-  if (isPressed) {
-    let x2 = ev.offsetX;
-    let y2 = ev.offsetY;
-    drawCircle(x2, y2);
-    drawLine(x, y, x2, y2);
-    y = y2;
-    x = x2;
-  }
-});
+  canvasEl.addEventListener("mouseup", () => {
+    isPressed = false;
+    x = undefined;
+    y = undefined;
+  });
+
+  canvasEl.addEventListener("mousemove", (ev) => {
+    if (isPressed) {
+      let x2 = ev.offsetX;
+      let y2 = ev.offsetY;
+      drawCircle(x2, y2);
+      drawLine(x, y, x2, y2);
+      y = y2;
+      x = x2;
+    }
+  });
+}
 
 decreaseBtn.addEventListener("click", () => {
   size -= 5;

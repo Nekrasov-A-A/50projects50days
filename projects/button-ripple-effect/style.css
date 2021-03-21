@@ -14,7 +14,7 @@
   background-color: rgba(0, 0, 0, 0.822);
   font-family: "Roboto", sans-serif;
 }
-.ripple {
+.wrapper .ripple {
   padding: 20px 40px;
   border: 0;
   background-color: rgba(206, 0, 206, 0.911);
@@ -25,10 +25,10 @@
   position: relative;
   overflow: hidden;
 }
-.ripple:focus {
+.wrapper .ripple:focus {
   outline: 0;
 }
-.ripple .circle {
+.wrapper .ripple .circle {
   position: absolute;
   background-color: #fff;
   width: 100px;

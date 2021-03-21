@@ -3,9 +3,6 @@
   margin: 0;
   box-sizing: border-box;
 }
-img {
-  max-width: 100%;
-}
 .wrapper {
   height: 100vh;
   display: flex;
@@ -22,48 +19,53 @@ img {
   border-radius: 10%;
   overflow: hidden;
 }
-.wrapper .card .wrapper-img {
+.wrapper .card .img-box {
   height: 200px;
   margin-bottom: 10px;
+}
+.wrapper .card .img-box img {
+  max-width: 100%;
 }
 .wrapper .card .user-profile {
   display: flex;
   flex-direction: column;
   padding: 20px;
 }
-.line {
+.wrapper .card .user-profile .line {
   width: 100%;
   height: 20px;
   border-radius: 8px;
-
   margin-bottom: 20px;
 }
-.line-small {
+.wrapper .card .user-profile .line-small {
   width: 100%;
   height: 10px;
   border-radius: 8px;
   margin-bottom: 10px;
 }
-.wrapper .card .user-profile .user {
+.wrapper .card .user-profile .user-info {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-top: 10px;
 }
-.wrapper .card .user-profile .user .circle {
+.wrapper .card .user-profile .user-info .circle {
   height: 50px;
   width: 50px;
   border-radius: 50px;
   margin-right: 10px;
   overflow: hidden;
 }
-.wrapper .card .user-profile .user .user-date {
+.wrapper .card .user-profile .user-info .circle img {
+  max-width: 100%;
+}
+.wrapper .card .user-profile .user-info .user-date {
   display: flex;
   flex-direction: column;
   height: 50px;
   width: 50%;
 }
-.wrapper .card .user-profile .user .user-date .line {
+.wrapper .card .user-profile .user-info .user-date .line {
   margin-bottom: 2px;
 }
 .loader {
@@ -75,9 +77,9 @@ img {
     #f6f7f8 100%
   );
   background-size: 200% 50%;
-  animation: bgPos 1s linear infinite;
+  animation: changeBgPosition 1s linear infinite;
 }
-@keyframes bgPos {
+@keyframes changeBgPosition {
   0% {
     background-position: 50% 0;
   }

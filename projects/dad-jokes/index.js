@@ -1,5 +1,5 @@
-const innertxt = document.getElementById("innertxt");
-const btn = document.getElementById("btn");
+const TextBox = document.getElementById("text-box");
+const getJokeBtn = document.getElementById("get-joke");
 
 const getJoke = async () => {
   const config = {
@@ -12,9 +12,9 @@ const getJoke = async () => {
 
   const data = await res.json();
 
-  innertxt.innerHTML = data.joke;
+  TextBox.innerHTML = data.joke;
 };
 
-btn.addEventListener("click", getJoke);
+getJokeBtn.addEventListener("click", getJoke);
 
 getJoke();

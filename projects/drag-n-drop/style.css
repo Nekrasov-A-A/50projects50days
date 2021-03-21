@@ -36,3 +36,14 @@ body {
   border-color: white;
   border-style: dashed;
 }
+@media screen and (max-width: 440px) {
+  .empty {
+    height: 60px;
+    width: 60px;
+  }
+  .fill {
+    background-image: url("https://source.unsplash.com/random/55x55");
+    height: 55px;
+    width: 55px;
+  }
+}

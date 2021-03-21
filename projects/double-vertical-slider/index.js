@@ -1,32 +1,35 @@
-const up = document.getElementById("up");
-const down = document.getElementById("down");
-const rslides = document.querySelectorAll(".ritem");
-const lslides = document.querySelectorAll(".litem");
-let lcurrent = 200;
+const upBtn = document.getElementById("up");
+const downBtn = document.getElementById("down");
+const rigthSlides = document.querySelectorAll(".rigth-item");
+const leftSlides = document.querySelectorAll(".left-item");
+let currentShift = 200;
 let current = 0;
 
-up.addEventListener("click", () => {
-  if (lcurrent <= 0) lcurrent = 300;
-  lcurrent -= 100;
+const slideSlides = () => {
+  rigthSlides.forEach((el) => {
+    el.style.transform = `translateY(-${current * 100}%)`;
+  });
+  leftSlides.forEach((elem) => {
+    elem.style.transform = `translateY(-${currentShift}%)`;
+  });
+};
+
+upBtn.addEventListener("click", () => {
+  if (currentShift <= 0) currentShift = 300;
+  currentShift -= 100;
 
   current++;
-  if (current > rslides.length - 1) current = 0;
-  rslides.forEach((el) => {
-    el.style.transform = `translateY(-${current * 100}%)`;
-  });
-  lslides.forEach((elem) => {
-    elem.style.transform = `translateY(-${lcurrent}%)`;
-  });
+  if (current > rigthSlides.length - 1) current = 0;
+
+  slideSlides();
 });
-down.addEventListener("click", () => {
-  lcurrent += 100;
-  if (lcurrent > 200) lcurrent = 0;
+
+downBtn.addEventListener("click", () => {
+  currentShift += 100;
+  if (currentShift > 200) currentShift = 0;
+
   current--;
   if (current < 0) current = 2;
-  rslides.forEach((el) => {
-    el.style.transform = `translateY(-${current * 100}%)`;
-  });
-  lslides.forEach((elem) => {
-    elem.style.transform = `translateY(-${lcurrent}%)`;
-  });
+
+  slideSlides();
 });

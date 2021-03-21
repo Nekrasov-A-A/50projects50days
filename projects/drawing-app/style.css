@@ -12,6 +12,9 @@ body {
 }
 canvas {
   border: 2px solid blueviolet;
+  position: relative;
+  width: 700px;
+  height: 500px;
 }
 .wrapper {
   display: flex;
@@ -57,4 +60,17 @@ canvas {
 
 .cross:nth-child(2) {
   transform: rotate(45deg) translateY(2px);
+}
+
+@media screen and (max-width: 440px) {
+  canvas {
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+  }
+  .wrapper {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 0;
+  }
 }

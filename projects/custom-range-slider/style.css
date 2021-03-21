@@ -10,7 +10,7 @@
   justify-content: center;
   background-color: rgba(133, 133, 133, 0.603);
 }
-.container {
+.wrapper .range-slider-box {
   position: relative;
 }
 input[type="range"] {

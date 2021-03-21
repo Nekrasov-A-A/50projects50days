@@ -1,14 +1,14 @@
-const forImg = document.getElementById("for-img");
-const header = document.getElementById("header");
-const user = document.getElementById("user");
+const ImageBox = document.getElementById("img-box");
+const userHeader = document.getElementById("user-header");
+const userFooter = document.getElementById("user-footer");
 
 const getData = () => {
-  forImg.innerHTML = `<img src="https://source.unsplash.com/random/350x200"/>`;
-  header.innerHTML = `
+  ImageBox.innerHTML = `<img src="https://source.unsplash.com/random/350x200"/>`;
+  userHeader.innerHTML = `
     <div class="line"><h3>Lorem, ipsum dolor.</h3></div>
     <div class="line"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, libero.</p></div>
     `;
-  user.innerHTML = `
+  userFooter.innerHTML = `
     <div class="circle"><img src='http://www.photoshop-master.ru/lessons/les989/2.jpg'/></div>
     <div class="user-date">
     <div class="line"><h4>Lorem, ipsum dolor.</h4></div>
