@@ -31,6 +31,14 @@ const updateSize = () => {
   sizeBox.innerText = size;
 };
 if (
+  /Android|webOS|iPhone|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
+    navigator.userAgent
+  )
+) {
+  canvasEl.setAttribute("width", "300");
+  canvasEl.setAttribute("height", "300");
+}
+if (
   /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
     navigator.userAgent
   )
