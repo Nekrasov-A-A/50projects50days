@@ -12,9 +12,6 @@ body {
 }
 canvas {
   border: 2px solid blueviolet;
-  position: relative;
-  width: 700px;
-  height: 500px;
 }
 .wrapper {
   display: flex;
@@ -70,7 +67,6 @@ canvas {
   }
   .wrapper {
     width: 80vw;
-    margin: 0 auto;
     padding: 0;
   }
 }

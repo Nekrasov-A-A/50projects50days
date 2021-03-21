@@ -30,26 +30,37 @@ const drawCircle = (x, y) => {
 const updateSize = () => {
   sizeBox.innerText = size;
 };
-
 if (
   /Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(
     navigator.userAgent
   )
 ) {
+  const addTouchOffsets = (event) => {
+    var touch = event.touches[0] || event.changedTouches[0];
+    var realTarget = document.elementFromPoint(touch.clientX, touch.clientY);
+    event.offsetX = touch.clientX - realTarget.getBoundingClientRect().x;
+    event.offsetY = touch.clientY - realTarget.getBoundingClientRect().y;
+    return event;
+  };
+
   canvasEl.addEventListener("touchstart", (ev) => {
     isPressed = true;
-    x = ev.changedTouches[0].pageX;
-    y = ev.changedTouches[0].pageY;
+    let event = addTouchOffsets(ev);
+    x = event.offsetX;
+    y = event.offsetY;
   });
+
   canvasEl.addEventListener("touchend", () => {
     isPressed = false;
     x = undefined;
     y = undefined;
   });
+
   canvasEl.addEventListener("touchmove", (ev) => {
     if (isPressed) {
-      let x2 = ev.changedTouches[0].pageX;
-      let y2 = ev.changedTouches[0].pageY;
+      let event = addTouchOffsets(ev);
+      let x2 = event.offsetX;
+      let y2 = event.offsetY;
       drawCircle(x2, y2);
       drawLine(x, y, x2, y2);
       y = y2;
