@@ -29,7 +29,7 @@ const minutesEl = document.getElementById("minutes");
 const toggleTheme = document.getElementById("btn");
 const mainTheme = document.getElementById("theme");
 
-const scale = (num, in_min, in_max, out_min, out_max) => {
+const getValue = (num, in_min, in_max, out_min, out_max) => {
   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 };
 
@@ -44,21 +44,21 @@ const ticTic = () => {
   const seconds = time.getSeconds();
   const ampm = hour > 12 ? "pm" : "am";
 
-  hoursEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+  hoursEl.style.transform = `translate(-50%, -100%) rotate(${getValue(
     hourForClock,
     0,
     11,
     0,
     360
   )}deg)`;
-  secondsEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+  secondsEl.style.transform = `translate(-50%, -100%) rotate(${getValue(
     seconds,
     0,
     59,
     0,
     360
   )}deg)`;
-  minutesEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+  minutesEl.style.transform = `translate(-50%, -100%) rotate(${getValue(
     minutes,
     0,
     59,

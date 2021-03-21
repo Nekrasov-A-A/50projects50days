@@ -19,6 +19,7 @@
 .wrapper .slider .slide {
   display: flex;
   width: 30%;
+  border-radius: 10px;
   height: 500px;
   overflow: hidden;
 }
@@ -46,4 +47,11 @@
 }
 .wrapper .slider .options .btn:active {
   transform: scale(0.98);
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper .slider .slide,
+  .wrapper .slider .options {
+    width: 80%;
+  }
 }

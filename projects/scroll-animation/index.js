@@ -1,6 +1,6 @@
 const boxElements = document.querySelectorAll(".box");
-console.log(boxElements);
-const fn = () => {
+
+const toggleShow = () => {
   const scrollTrigger = (window.innerHeight / 10) * 8;
   boxElements.forEach((el) => {
     let boxTop = el.getBoundingClientRect().top;
@@ -12,6 +12,6 @@ const fn = () => {
   });
 };
 
-window.addEventListener("scroll", fn);
+window.addEventListener("scroll", toggleShow);
 
-fn();
+toggleShow();

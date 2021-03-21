@@ -77,10 +77,22 @@
 .tools {
   width: 15%;
 }
-.todo-wrapper.completed {
+.todo-wrapper.completed,
+.wrapper .input.completed {
   border: 2px solid chartreuse;
+  color: chartreuse;
+}
+.wrapper .input.completed::placeholder {
   color: chartreuse;
 }
 .todo-wrapper.completed .tools button .fa-check {
   color: chartreuse;
+}
+.todo-wrapper.error,
+.wrapper .input.error {
+  border: 2px solid rgba(199, 0, 0, 0.904);
+}
+.todo-wrapper.error .control-value textarea::placeholder,
+.wrapper .input.error::placeholder {
+  color: red;
 }

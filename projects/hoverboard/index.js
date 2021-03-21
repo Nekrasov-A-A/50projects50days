@@ -1,30 +1,32 @@
 const wrapper = document.getElementById("wrapper");
-const TOTAL_AMOUNT = 510;
+const CIRCLE_SIDE = 20;
+const availableScreenWidth = window.screen.availWidth;
+let maximumWidth = (availableScreenWidth / 100) * 40;
+const TOTAL_AMOUNT = Math.floor(maximumWidth / CIRCLE_SIDE) * 20;
 
-function createEL() {
+function createCicrles() {
   for (let i = 0; i < TOTAL_AMOUNT; i++) {
-    const square = document.createElement("div");
-    square.classList.add("square");
-    square.addEventListener("mouseover", () => {
-      setColorForEl(square);
+    const circle = document.createElement("div");
+    circle.classList.add("circle");
+    circle.addEventListener("mouseover", () => {
+      setColorForCircle(circle);
     });
-    square.addEventListener("mouseout", () => {
-      removeColorForEl(square);
+    circle.addEventListener("mouseout", () => {
+      removeColorFromCircle(circle);
     });
-    wrapper.appendChild(square);
+    wrapper.appendChild(circle);
   }
 }
-createEL();
+createCicrles();
 
-function setColorForEl(el) {
+function setColorForCircle(circle) {
   let color = getColor();
-  el.style.backgroundColor = color;
-  el.style.boxShadow = `0 5px 6px ${color}`;
-  console.log(el);
+  circle.style.backgroundColor = color;
+  circle.style.boxShadow = `0 5px 6px ${color}`;
 }
-function removeColorForEl(el) {
-  el.style.backgroundColor = "#fff";
-  el.style.boxShadow = `0 5px 6px rgba(0,0,0,.2)`;
+function removeColorFromCircle(circle) {
+  circle.style.backgroundColor = "#fff";
+  circle.style.boxShadow = `0 5px 6px rgba(0,0,0,.2)`;
 }
 
 function getColor() {

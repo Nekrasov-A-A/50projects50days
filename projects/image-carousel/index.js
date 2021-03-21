@@ -1,34 +1,37 @@
 const images = document.querySelectorAll("img");
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
 let idx = 0;
 
-const nextImg = () => {
+const getNextImg = () => {
   idx++;
   if (idx >= images.length) {
     idx = 0;
   }
-  images.forEach((el) => (el.style.transform = `translateX(-${idx * 100}%)`));
+  images.forEach(
+    (image) => (image.style.transform = `translateX(-${idx * 100}%)`)
+  );
 };
 
-let interval = setInterval(nextImg, 2000);
+let intervalId = setInterval(getNextImg, 2000);
 
 const resetInterval = () => {
-  clearInterval(interval);
-  interval = setInterval(nextImg, 2000);
+  clearInterval(intervalId);
+  intervalId = setInterval(getNextImg, 2000);
 };
 
-next.addEventListener("click", () => {
-  nextImg();
+nextBtn.addEventListener("click", () => {
+  getNextImg();
   resetInterval();
 });
-prev.addEventListener("click", () => {
+prevBtn.addEventListener("click", () => {
   idx--;
   if (idx < 0) {
     idx = 4;
   }
   images.forEach(
-    (el) => (el.style.transform = `translateX(-${(idx + 1) * 100 - 100}%)`)
+    (image) =>
+      (image.style.transform = `translateX(-${(idx + 1) * 100 - 100}%)`)
   );
   resetInterval();
 });

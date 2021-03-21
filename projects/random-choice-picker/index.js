@@ -11,7 +11,7 @@ const createSpan = (value) => {
   });
 };
 
-const rndChoose = () => {
+const chooseAtRandom = () => {
   const spans = document.querySelectorAll("span");
   return spans[Math.floor(Math.random() * spans.length)];
 };
@@ -20,8 +20,8 @@ const toggleActive = (tag) => {
 };
 const randomPick = () => {
   const times = 30;
-  const interval = setInterval(() => {
-    let pick = rndChoose();
+  const intervalId = setInterval(() => {
+    let pick = chooseAtRandom();
     toggleActive(pick);
     setTimeout(() => {
       toggleActive(pick);
@@ -29,8 +29,8 @@ const randomPick = () => {
   }, 100);
 
   setTimeout(() => {
-    clearInterval(interval);
-    toggleActive(rndChoose());
+    clearInterval(intervalId);
+    toggleActive(chooseAtRandom());
   }, times * 100);
 };
 

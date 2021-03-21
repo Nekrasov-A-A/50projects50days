@@ -1,6 +1,6 @@
 const unsplashURL = "https://source.unsplash.com/random/";
 const box = document.getElementById("box");
-const more = document.getElementById("more");
+const moreBtn = document.getElementById("more");
 let amount = 15;
 
 const getRndSize = () => {
@@ -12,13 +12,13 @@ const getRndSize = () => {
   );
 };
 
-const fn = () => {
+const getMore = () => {
   for (let i = 0; i < amount; i++) {
     const rndImg = document.createElement("img");
     rndImg.src = `${unsplashURL}${getRndSize()}`;
     box.appendChild(rndImg);
   }
 };
-fn();
+getMore();
 
-more.addEventListener("click", () => fn());
+moreBtn.addEventListener("click", () => getMore());

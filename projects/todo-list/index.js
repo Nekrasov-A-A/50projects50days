@@ -1,5 +1,5 @@
 const todo = document.getElementById("todo");
-const box = document.getElementById("box");
+const todosBox = document.getElementById("box");
 
 const createEl = (value) => {
   let valueText = "";
@@ -19,86 +19,79 @@ const createEl = (value) => {
   const textEl = todoEl.querySelector("#control-value");
   const completeBtn = todoEl.querySelector("#complete");
   const deleteBtn = todoEl.querySelector("#delete-btn");
+  const editBtn = todoEl.querySelector("#edit");
 
-  todoEl.querySelector("#edit").addEventListener("click", () => {
+  editBtn.addEventListener("click", () => {
     todoEl.classList.remove("completed");
-    todoEl.style.border = "2px solid transparent";
     valueText = textEl.innerText;
     textEl.innerHTML = `<textarea>${textEl.innerText}</textarea>`;
-    const textAr = textEl.querySelector("textarea");
-    textAr.focus();
-    textAr.selectionStart = textAr.value.length;
-    textAr.addEventListener("keypress", (ev) => {
+
+    const textArea = textEl.querySelector("textarea");
+    textArea.focus();
+    textArea.selectionStart = textArea.value.length;
+
+    textArea.addEventListener("keypress", (ev) => {
       if (ev.key === "Enter" && ev.currentTarget.value === "") {
         ev.preventDefault();
-        textAr.blur();
-        todoEl.style.border = "2px solid transparent";
-        todoEl.placeholder = "Enter todo";
+        textArea.blur();
       }
       if (ev.key === "Enter" && ev.currentTarget.value !== "") {
         ev.preventDefault();
-        textAr.blur();
+        textArea.blur();
       }
     });
-    textAr.addEventListener("input", (ev) => {
+
+    textArea.addEventListener("input", (ev) => {
       if (ev.currentTarget.value.length === 0) {
-        todoEl.style.border = "2px solid red";
+        todoEl.classList.add("error");
         ev.currentTarget.placeholder = `Todo can't be empty`;
       } else {
-        todoEl.style.border = "2px solid transparent";
+        todoEl.classList.remove("error");
         todoEl.placeholder = "Enter todo";
       }
     });
-    textAr.addEventListener("blur", () => {
-      if (textAr.value === "") {
+
+    textArea.addEventListener("blur", () => {
+      if (textArea.value === "") {
         textEl.innerHTML = valueText;
-        todoEl.style.border = "2px solid transparent";
+        todoEl.classList.remove("error");
         todoEl.placeholder = "Enter todo";
       } else {
-        textEl.innerHTML = textAr.value;
-        todoEl.style.border = "2px solid transparent";
+        textEl.innerHTML = textArea.value;
+        todoEl.classList.remove("error");
         todoEl.placeholder = "Enter todo";
       }
     });
   });
+
   completeBtn.addEventListener("click", () => {
     todoEl.classList.toggle("completed");
-    if (todoEl.classList.contains("completed")) {
-      todoEl.style.border = "2px solid chartreuse";
-    } else {
-      todoEl.style.border = "2px solid transparent";
-    }
   });
 
-  box.appendChild(todoEl);
+  todosBox.appendChild(todoEl);
+
   deleteBtn.addEventListener("click", () => {
     todoEl.remove();
   });
 };
-
+const setDefaultForInput = () => {
+  todo.classList.remove("error");
+  todo.classList.remove("completed");
+  todo.placeholder = "Enter todo";
+};
 todo.addEventListener("keypress", (ev) => {
   if (ev.key === "Enter" && ev.currentTarget.value === "") {
-    todo.style.border = "2px solid red";
+    todo.classList.remove("completed");
+    todo.classList.add("error");
     todo.placeholder = "Todo can't be empty";
-    setTimeout(() => {
-      todo.style.border = "2px solid transparent";
-      todo.placeholder = "Enter todo";
-    }, 1500);
   }
   if (ev.key === "Enter" && ev.currentTarget.value !== "") {
     createEl(ev.currentTarget.value);
     todo.value = "";
-    todo.style.border = "2px solid chartreuse";
+    todo.classList.remove("error");
+    todo.classList.add("completed");
     todo.placeholder = "Todo added";
-    setTimeout(() => {
-      todo.style.border = "2px solid transparent";
-      todo.placeholder = "Enter todo";
-    }, 1500);
   }
 });
-
-todo.addEventListener("input", () => {
-  todo.style.border = "2px solid transparent";
-  todo.style.color = "black";
-  todo.placeholder = "Enter todo";
-});
+todo.addEventListener("blur", setDefaultForInput);
+todo.addEventListener("input", setDefaultForInput);

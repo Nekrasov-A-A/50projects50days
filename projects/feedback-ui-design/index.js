@@ -1,16 +1,16 @@
-const btns = document.querySelectorAll(".btn");
-const send = document.getElementById("send");
-const box = document.getElementById("box");
+const emotionBtns = document.querySelectorAll(".btn");
+const sendFeedback = document.getElementById("send");
+const boxForGratitude = document.getElementById("box");
 
-btns.forEach((el) => {
-  el.addEventListener("click", () => {
+emotionBtns.forEach((emotion) => {
+  emotion.addEventListener("click", () => {
     document.querySelector(".active").classList.remove("active");
-    el.classList.toggle("active");
+    emotion.classList.toggle("active");
   });
 });
 
-send.addEventListener("click", () => {
-  box.innerHTML = `
+sendFeedback.addEventListener("click", () => {
+  boxForGratitude.innerHTML = `
     <i class="fas fa-heart"></i>
     <h3>Thank You!</h3>
     <h3>Feedback: ${document.querySelector(".active").innerText}</h3>

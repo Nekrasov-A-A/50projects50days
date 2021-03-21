@@ -33,10 +33,10 @@ const quizData = [
   },
 ];
 
-const radio = document.querySelectorAll("input");
+const selections = document.querySelectorAll("input");
 let idx = 0;
-const question = document.getElementById("question");
-const btn = document.getElementById("btn");
+const questionBox = document.getElementById("question");
+const submitBtn = document.getElementById("btn");
 let userResults = [];
 let userChoise = "";
 const container = document.querySelector(".container");
@@ -52,17 +52,17 @@ function* generateOption() {
 }
 let generator = generateOption();
 
-radio.forEach((el) => {
+selections.forEach((el) => {
   el.addEventListener("click", (ev) => {
-    radio.forEach((e) => (e.checked = false));
+    selections.forEach((e) => (e.checked = false));
     ev.currentTarget.checked = true;
     userChoise = ev.currentTarget;
   });
 });
 
-const fn = () => {
-  question.innerText = quizData[idx].question;
-  radio.forEach(
+const setQuestion = () => {
+  questionBox.innerText = quizData[idx].question;
+  selections.forEach(
     (el) => (el.nextElementSibling.innerText = generator.next().value)
   );
   idx++;
@@ -70,12 +70,12 @@ const fn = () => {
     idx = 0;
   }
 };
-fn();
+setQuestion();
 
-btn.addEventListener("click", () => {
+submitBtn.addEventListener("click", () => {
   if (userChoise) {
-    fn();
-    radio.forEach((e) => (e.checked = false));
+    setQuestion();
+    selections.forEach((e) => (e.checked = false));
     userResults.push(userChoise.id);
     userChoise = "";
     if (userResults.length === quizData.length) {

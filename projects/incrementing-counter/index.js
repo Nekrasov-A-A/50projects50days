@@ -1,18 +1,17 @@
 const counters = document.querySelectorAll(".counter");
 
-const fn = (elem, max) => {
+const startCountingDown = (counter, max) => {
   let i = max / 100;
-  elem.innerText = 0;
-  let c = elem.innetText;
-  const interval = setInterval(() => {
-    let c = +elem.innerText;
-    elem.innerHTML = (c + i).toFixed();
+  counter.innerText = 0;
+  const intervalId = setInterval(() => {
+    let c = +counter.innerText;
+    counter.innerHTML = (c + i).toFixed();
   }, 30);
   setTimeout(() => {
-    clearInterval(interval);
+    clearInterval(intervalId);
   }, 3000);
 };
 
-counters.forEach((el) => {
-  fn(el, el.dataset.followers);
+counters.forEach((counter) => {
+  startCountingDown(counter, counter.dataset.followers);
 });

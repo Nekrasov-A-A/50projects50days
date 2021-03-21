@@ -97,3 +97,14 @@ body {
   transform: translateY(-27px);
   color: rgb(228, 228, 228);
 }
+
+@media screen and (max-width: 440px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 441px) {
+  .wrapper {
+    width: 60%;
+  }
+}

@@ -4,9 +4,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  overflow: hidden;
-}
+
 .container {
   width: 90vw;
   height: 80vh;
@@ -57,4 +55,31 @@ body {
 .container__img.open > .container__text {
   opacity: 1;
   visibility: visible;
+}
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .container__img {
+    width: 50px;
+    background-size: cover;
+  }
+  .container__img.open {
+    width: 60vw;
+  }
+}
+@media screen and (max-width: 440px) {
+  .container {
+    grid-auto-flow: row;
+    width: 100vw;
+    min-height: fit-content;
+    margin: 0;
+  }
+  .container__img {
+    height: 90px;
+    width: 80vw;
+    transition: height 1.5s linear;
+    margin: 0 10vw 10px;
+    background-size: cover;
+  }
+  .container__img.open {
+    height: 60vh;
+  }
 }

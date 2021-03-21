@@ -80,3 +80,20 @@
 .success.show {
   display: block;
 }
+
+@media screen and (max-width: 440px) {
+  .container {
+    width: 80%;
+  }
+  .success {
+    top: 5%;
+    left: 10%;
+    width: 80%;
+    transform: translateX(0%);
+  }
+}
+@media screen and (max-width: 1024px) and (min-width: 441px) {
+  .container {
+    width: 60%;
+  }
+}

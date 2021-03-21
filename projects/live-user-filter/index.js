@@ -2,7 +2,7 @@ const box = document.getElementById("box");
 const search = document.getElementById("search");
 const users = [];
 
-const fn = async () => {
+const getUsers = async () => {
   const res = await fetch("https://randomuser.me/api?results=50");
   const data = await res.json();
   box.innerHTML = "";
@@ -21,9 +21,9 @@ const fn = async () => {
     box.appendChild(user);
   });
 };
-fn();
+getUsers();
 
-const filter = (str) => {
+const searchUser = (str) => {
   users.forEach((el) => {
     if (el.innerText.toLowerCase().includes(`${str.toLowerCase()}`)) {
       el.classList.remove("hide");
@@ -34,5 +34,5 @@ const filter = (str) => {
 };
 
 search.addEventListener("input", (ev) => {
-  filter(ev.target.value);
+  searchUser(ev.target.value);
 });

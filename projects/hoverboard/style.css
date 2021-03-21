@@ -20,7 +20,7 @@
   max-width: 40vw;
 }
 
-.square {
+.circle {
   margin: 2px;
   width: 16px;
   height: 16px;
@@ -29,6 +29,6 @@
   transition: 3.5s;
   border-radius: 50%;
 }
-.square:hover {
+.circle:hover {
   transition-duration: 0s;
 }

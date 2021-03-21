@@ -13,8 +13,9 @@
 }
 h1 {
   margin: 30px 0;
+  text-align: center;
 }
-.wrapper {
+.card {
   position: relative;
   background-color: transparent;
   width: 40%;
@@ -24,7 +25,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.wrapper p {
+.card p {
   display: none;
 }
 .fas {
@@ -37,12 +38,12 @@ h1 {
 .fa-times {
   display: none;
 }
-.wrapper.show {
+.card.show {
   background-color: #fff;
   overflow: hidden;
 }
-.wrapper.show::before,
-.wrapper.show::after {
+.card.show::before,
+.card.show::after {
   content: "\f075";
   font-family: "Font Awesome 5 Free";
   position: absolute;
@@ -53,18 +54,24 @@ h1 {
   left: 0;
   transform: translateY(-50%);
 }
-.wrapper.show::after {
+.card.show::after {
   transform: rotate(-90deg);
   top: -15px;
   left: -15px;
 }
-.wrapper.show p {
+.card.show p {
   display: block;
   margin-top: 30px;
 }
-.wrapper.show .fa-chevron-down {
+.card.show .fa-chevron-down {
   display: none;
 }
-.wrapper.show .fa-times {
+.card.show .fa-times {
   display: block;
+}
+
+@media screen and (max-width: 440px) {
+  .card {
+    width: 80%;
+  }
 }

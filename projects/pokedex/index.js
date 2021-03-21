@@ -18,7 +18,6 @@ const colors = {
 const getPokemon = async (i) => {
   const result = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
   const res = await result.json();
-  console.log(res);
   createPokeCard(res);
 };
 

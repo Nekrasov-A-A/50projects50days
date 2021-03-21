@@ -1,34 +1,36 @@
 const progress = document.getElementById("progress");
-const prev = document.getElementById("prev");
-const next = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
+const nextBtn = document.getElementById("next");
 const circles = document.querySelectorAll(".circle");
 let count = 1;
-const len = circles.length;
+const circlesLength = circles.length;
 
-const action = () => {
-  circles.forEach((el, idx) => {
-    if (idx <= count - 1) el.classList.add("active");
+const makeStep = () => {
+  circles.forEach((circle, idx) => {
+    if (idx <= count - 1) circle.classList.add("active");
     else {
-      el.classList.remove("active");
+      circle.classList.remove("active");
     }
   });
   progress.style.width =
-    ((document.querySelectorAll(".active").length - 1) / (len - 1)) * 100 + "%";
-  if (count === 1) prev.disabled = true;
-  else if (count === len) next.disabled = true;
+    ((document.querySelectorAll(".active").length - 1) / (circlesLength - 1)) *
+      100 +
+    "%";
+  if (count === 1) prevBtn.disabled = true;
+  else if (count === circlesLength) nextBtn.disabled = true;
   else {
-    next.disabled = false;
-    prev.disabled = false;
+    nextBtn.disabled = false;
+    prevBtn.disabled = false;
   }
 };
-next.addEventListener("click", () => {
+nextBtn.addEventListener("click", () => {
   count++;
-  if (count > len) count = len;
-  action();
+  if (count > circlesLength) count = circlesLength;
+  makeStep();
 });
 
-prev.addEventListener("click", () => {
+prevBtn.addEventListener("click", () => {
   count--;
   if (count < 1) count = 1;
-  action();
+  makeStep();
 });

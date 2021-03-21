@@ -76,3 +76,10 @@
 .send:active {
   transform: scale(0.98);
 }
+
+@media screen and (max-width: 360px) {
+  .tools {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -5,7 +5,7 @@ music.forEach((el) => {
   const btn = document.createElement("button");
   btn.classList.add("btn");
   btn.innerText = el;
-  document.getElementById("control").appendChild(btn);
+  control.appendChild(btn);
 });
 control.addEventListener("click", (event) => {
   music.forEach((el) => {
